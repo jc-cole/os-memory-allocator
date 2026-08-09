@@ -1,6 +1,6 @@
 # CS377 OS Memory Allocator
 
-This repository contains a CS377 Operating Systems project that implements a small custom memory allocator in C++.
+This repository contains an Operating Systems project that implements a small custom memory allocator in C++.
 
 The allocator manages a fixed-size heap, backed by `mmap`, and provides replacements for the basic `malloc` and `free` workflow:
 
