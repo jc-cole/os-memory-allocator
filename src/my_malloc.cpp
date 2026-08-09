@@ -142,7 +142,6 @@ void split(size_t size, node_t **previous, node_t **free_block,
   (*allocated)->size = size;
   (*allocated)->magic = MAGIC;
 
-  // TODO
 }
 
 // Returns a pointer to a region of memory having at least the request `size`
@@ -177,20 +176,6 @@ void *my_malloc(size_t size) {
  * address of the new block is greater than the address of the previous block
  * and less than the address of the next block.
  *
- * @hints
- *   - find the location in the free_list where the new block should be
- inserted.
- *   - First check if the next free block id physically adjacent to the new
- block.
- *     If so, merge the two blocks.
- *   - Next check if the previous free block is physically adjacent to the new
- *     block. If so, merge the two blocks.
- *
- * @warning
- *  - Make sure to update the next pinters correctlly.
- *  - If the new block is the first block in the free list, make sure to update
- *    the head pointer to point to the new block.
-
  * PARAMETERS:
  * free_block - the block to coalesce
  *
@@ -243,6 +228,4 @@ void my_free(void *allocated) {
   free_block->next = NULL;
 
   coalesce(free_block);
-
-  // TODO
 }
