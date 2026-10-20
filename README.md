@@ -1,4 +1,4 @@
-# CS377 OS Memory Allocator
+# OS Memory Allocator
 
 This repository contains an Operating Systems project that implements a small custom memory allocator in C++.
 
